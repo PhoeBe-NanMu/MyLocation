@@ -94,7 +94,10 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void showLocation(final Location location) {
-        String currentPosition = "Latitude is " + location.getAltitude() + "\n" + "Longitude is " + location.getLongitude();
+        /*注意：Latitude：纬度
+        *       Longitude：经度
+        *       Altitude：海拔（不能获取）*/
+        String currentPosition = "Latitude is " + location.getLatitude() + "\n" + "Longitude is " + location.getLongitude();
         locationTextView.setText(currentPosition);
 
         /*显示从服务器返回的位置信息*/
